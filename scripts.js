@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
       `Збережені мінімальні числа: ${minValues}\nДані будуть видалені після натискання "OK".`
     );
 
-    document.cookie = "minValues=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    document.cookie =
+      "minValues=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 
     alert("Cookies видалено. Перезавантажте сторінку.");
 
