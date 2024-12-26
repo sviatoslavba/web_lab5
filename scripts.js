@@ -26,6 +26,11 @@ function calculateTriangleArea() {
 document.addEventListener("DOMContentLoaded", () => {
   const block3 = document.querySelector(".block-3");
 
+  if (sessionStorage.getItem("reloadAfterCookieDeletion")) {
+    sessionStorage.removeItem("reloadAfterCookieDeletion");
+    return;
+  }
+
   const savedData = document.cookie
     .split("; ")
     .find((row) => row.startsWith("minValues="));
@@ -35,8 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
     alert(
       `Збережені мінімальні числа: ${minValues}\nДані будуть видалені після натискання "OK".`
     );
+
     document.cookie = "minValues=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+
     alert("Cookies видалено. Перезавантажте сторінку.");
+
+    sessionStorage.setItem("reloadAfterCookieDeletion", "true");
+
     location.reload();
   } else {
     const form = document.createElement("form");
