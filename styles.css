@@ -193,6 +193,26 @@ body {
   .block-3 p {
     font-size: small;
   }
+  .block-3 button {
+    font-size: small;
+  }
+  .block-3 form p {
+    padding: 0.5em;
+    font-size: small;
+  }
+  .block-3 form label {
+    font-size: small;
+    max-width: 80%;
+    text-align: center;
+  }
+  .block-3 form input {
+    font-size: small;
+    max-width: 50%;
+  }
+  .block-3 form button {
+    font-size: small;
+    max-width: 80%;
+  }
   .block-6 {
     display: flex;
     flex-direction: column;
